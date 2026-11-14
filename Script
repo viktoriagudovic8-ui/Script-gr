@@ -1,0 +1,545 @@
+--[=[
+ ██╗  ██╗ ██████╗  █████╗ ███╗   ██╗ ██████╗ ████████╗████████╗         ████████╗      ██████╗
+██║  ██║██╔═══██╗██╔══██╗████╗  ██║██╔════╝ ╚══██╔══╝╚══██╔══╝        ██╔═══██╗     ██╔═══██╗
+███████║██║   ██║███████║██╔██╗ ██║██║  ███╗   ██║      ██║              ██║   ██║            ██║
+██╔══██║██║   ██║██╔══██║██║╚██╗██║██║   ██║   ██║      ██║              ██║   ██║      ██████╔╝
+██║  ██║╚██████╔╝██║  ██║██║ ╚████║╚██████╔╝   ██║      ██║      ██      ██║   ██║     ╚════██╗
+╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝    ╚═╝      ╚═╝      ╚═╝     ╚███████╝     ██████╔╝
+using gui creator by hoangtt03                                                               
+]=]
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local HTT03 = {}
+local _rbFuncs = {}
+-- ScreenGui "ScreenGui_1"
+HTT03["ScreenGui_1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))
+HTT03["ScreenGui_1"].Name = "ScreenGui_1"
+HTT03["ScreenGui_1"].Enabled = true
+HTT03["ScreenGui_1"].DisplayOrder = 0
+HTT03["ScreenGui_1"].IgnoreGuiInset = true
+HTT03["ScreenGui_1"].ResetOnSpawn = false
+-- Frame "Frame"
+HTT03["Frame_2"] = Instance.new("Frame", HTT03["ScreenGui_1"])
+HTT03["Frame_2"].Name = "Frame"
+HTT03["Frame_2"].Visible = true
+HTT03["Frame_2"].ZIndex = 1
+HTT03["Frame_2"].LayoutOrder = 0
+HTT03["Frame_2"].Position = UDim2.new(0.429688,0,0.883750,0)
+HTT03["Frame_2"].Size = UDim2.new(0.157031,0,0.075000,0)
+HTT03["Frame_2"].AnchorPoint = Vector2.new(0.000000,0.000000)
+HTT03["Frame_2"].Rotation = 0
+HTT03["Frame_2"].BackgroundColor3 = Color3.fromRGB(58,58,58)
+HTT03["Frame_2"].BackgroundTransparency = 0.4000000059604645
+HTT03["Frame_2"].BorderSizePixel = 1
+HTT03["Frame_2"].BorderColor3 = Color3.fromRGB(27,42,53)
+HTT03["Frame_2"].ClipsDescendants = false
+HTT03["Frame_2"].Active = false
+HTT03["Frame_2"].Selectable = false
+-- TextButton "TextButton"
+HTT03["TextButton_3"] = Instance.new("TextButton", HTT03["Frame_2"])
+HTT03["TextButton_3"].Name = "TextButton"
+HTT03["TextButton_3"].Visible = true
+HTT03["TextButton_3"].ZIndex = 1
+HTT03["TextButton_3"].LayoutOrder = 0
+HTT03["TextButton_3"].Position = UDim2.new(0.024876,0,0.083333,0)
+HTT03["TextButton_3"].Size = UDim2.new(0.303483,0,0.816667,0)
+HTT03["TextButton_3"].AnchorPoint = Vector2.new(0.000000,0.000000)
+HTT03["TextButton_3"].Rotation = 0
+HTT03["TextButton_3"].BackgroundColor3 = Color3.fromRGB(161,0,0)
+HTT03["TextButton_3"].BackgroundTransparency = 0
+HTT03["TextButton_3"].BorderSizePixel = 1
+HTT03["TextButton_3"].BorderColor3 = Color3.fromRGB(27,42,53)
+HTT03["TextButton_3"].ClipsDescendants = false
+HTT03["TextButton_3"].Active = true
+HTT03["TextButton_3"].Selectable = true
+HTT03["TextButton_3"].AutoButtonColor = true
+HTT03["TextButton_3"].Modal = false
+HTT03["TextButton_3"].Text = "Reset"
+HTT03["TextButton_3"].TextColor3 = Color3.fromRGB(255,255,255)
+HTT03["TextButton_3"].TextSize = 8
+HTT03["TextButton_3"].TextTransparency = 0
+HTT03["TextButton_3"].TextScaled = false
+HTT03["TextButton_3"].TextWrapped = false
+HTT03["TextButton_3"].TextXAlignment = Enum.TextXAlignment.Center
+HTT03["TextButton_3"].TextYAlignment = Enum.TextYAlignment.Center
+HTT03["TextButton_3"].Font = Enum.Font.Legacy
+HTT03["TextButton_3"].TextStrokeColor3 = Color3.fromRGB(0,0,0)
+HTT03["TextButton_3"].TextStrokeTransparency = 1
+HTT03["TextButton_3"].RichText = false
+-- LocalScript "Die"
+HTT03["LocalScript_4"] = Instance.new("LocalScript")
+HTT03["LocalScript_4"].Name = "Die"
+do
+    pcall(function()
+        if setthreadidentity then setthreadidentity(8) end
+        HTT03["LocalScript_4"].Source = [==[local button = script.Parent
+local player = game.Players.LocalPlayer
+
+button.MouseButton1Click:Connect(function()
+    local character = player.Character
+    if not character then
+        warn("Нет персонажа")
+        return
+    end
+
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if not humanoid then
+        warn("Нет Humanoid")
+        return
+    end
+
+    humanoid.Health = 0
+end)]==]
+    end)
+    HTT03["LocalScript_4"].Parent = HTT03["TextButton_3"]
+    if HTT03["LocalScript_4"]:IsA("BaseScript") then HTT03["LocalScript_4"].Enabled = true end
+    pcall(function()
+        local _gcFn = loadstring and loadstring([==[local button = script.Parent
+local player = game.Players.LocalPlayer
+
+button.MouseButton1Click:Connect(function()
+    local character = player.Character
+    if not character then
+        warn("Нет персонажа")
+        return
+    end
+
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if not humanoid then
+        warn("Нет Humanoid")
+        return
+    end
+
+    humanoid.Health = 0
+end)]==]) or load([==[local button = script.Parent
+local player = game.Players.LocalPlayer
+
+button.MouseButton1Click:Connect(function()
+    local character = player.Character
+    if not character then
+        warn("Нет персонажа")
+        return
+    end
+
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if not humanoid then
+        warn("Нет Humanoid")
+        return
+    end
+
+    humanoid.Health = 0
+end)]==])
+        if _gcFn then
+            local _gcEnv = setmetatable({script = HTT03["LocalScript_4"]}
+                , {__index = getfenv and getfenv() or _G})
+            pcall(function() setfenv(_gcFn, _gcEnv) end)
+            pcall(_gcFn)
+        end
+    end)
+end
+-- TextButton "TextButton"
+HTT03["TextButton_5"] = Instance.new("TextButton", HTT03["Frame_2"])
+HTT03["TextButton_5"].Name = "TextButton"
+HTT03["TextButton_5"].Visible = true
+HTT03["TextButton_5"].ZIndex = 1
+HTT03["TextButton_5"].LayoutOrder = 0
+HTT03["TextButton_5"].Position = UDim2.new(0.368159,0,0.100000,0)
+HTT03["TextButton_5"].Size = UDim2.new(0.273632,0,0.800000,0)
+HTT03["TextButton_5"].AnchorPoint = Vector2.new(0.000000,0.000000)
+HTT03["TextButton_5"].Rotation = 0
+HTT03["TextButton_5"].BackgroundColor3 = Color3.fromRGB(79,88,255)
+HTT03["TextButton_5"].BackgroundTransparency = 0
+HTT03["TextButton_5"].BorderSizePixel = 1
+HTT03["TextButton_5"].BorderColor3 = Color3.fromRGB(27,42,53)
+HTT03["TextButton_5"].ClipsDescendants = false
+HTT03["TextButton_5"].Active = true
+HTT03["TextButton_5"].Selectable = true
+HTT03["TextButton_5"].AutoButtonColor = true
+HTT03["TextButton_5"].Modal = false
+HTT03["TextButton_5"].Text = "jump"
+HTT03["TextButton_5"].TextColor3 = Color3.fromRGB(247,247,247)
+HTT03["TextButton_5"].TextSize = 8
+HTT03["TextButton_5"].TextTransparency = 0
+HTT03["TextButton_5"].TextScaled = false
+HTT03["TextButton_5"].TextWrapped = false
+HTT03["TextButton_5"].TextXAlignment = Enum.TextXAlignment.Center
+HTT03["TextButton_5"].TextYAlignment = Enum.TextYAlignment.Center
+HTT03["TextButton_5"].Font = Enum.Font.Legacy
+HTT03["TextButton_5"].TextStrokeColor3 = Color3.fromRGB(0,0,0)
+HTT03["TextButton_5"].TextStrokeTransparency = 1
+HTT03["TextButton_5"].RichText = false
+-- LocalScript "jump"
+HTT03["LocalScript_6"] = Instance.new("LocalScript")
+HTT03["LocalScript_6"].Name = "jump"
+do
+    pcall(function()
+        if setthreadidentity then setthreadidentity(8) end
+        HTT03["LocalScript_6"].Source = [==[local button = script.Parent
+local player = game.Players.LocalPlayer
+
+local cooldown = 0.1      -- анти-спам (сек)
+local lastJump = 0
+
+local function forceJump()
+    -- защита от спама
+    if tick() - lastJump < cooldown then return end
+    lastJump = tick()
+
+    local character = player.Character
+    if not character then return end
+
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if not humanoid or humanoid.Health <= 0 then return end
+
+    -- Форсируем прыжок в любом состоянии (земля, полёт, падение)
+    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+    -- Резерв: если Humanoid не применил импульс (например, застрял в состоянии)
+    -- толкаем корневой Part напрямую по Y
+    local root = character:FindFirstChild("HumanoidRootPart")
+    if root then
+        local jumpVel = humanoid.JumpPower
+        if not humanoid.UseJumpPower then
+            -- если используется JumpHeight — переводим в скорость
+            -- v = sqrt(2 * g * h), g = workspace.Gravity
+            jumpVel = math.sqrt(2 * workspace.Gravity * humanoid.JumpHeight)
+        end
+        -- Применяем только если реально ещё не прыгнули (по вертикальной скорости)
+        if root.AssemblyLinearVelocity.Y < jumpVel * 0.5 then
+            root.AssemblyLinearVelocity = Vector3.new(
+                root.AssemblyLinearVelocity.X,
+                jumpVel,
+                root.AssemblyLinearVelocity.Z
+            )
+        end
+    end
+end
+
+button.MouseButton1Click:Connect(forceJump)]==]
+    end)
+    HTT03["LocalScript_6"].Parent = HTT03["TextButton_5"]
+    if HTT03["LocalScript_6"]:IsA("BaseScript") then HTT03["LocalScript_6"].Enabled = true end
+    pcall(function()
+        local _gcFn = loadstring and loadstring([==[local button = script.Parent
+local player = game.Players.LocalPlayer
+
+local cooldown = 0.1      -- анти-спам (сек)
+local lastJump = 0
+
+local function forceJump()
+    -- защита от спама
+    if tick() - lastJump < cooldown then return end
+    lastJump = tick()
+
+    local character = player.Character
+    if not character then return end
+
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if not humanoid or humanoid.Health <= 0 then return end
+
+    -- Форсируем прыжок в любом состоянии (земля, полёт, падение)
+    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+    -- Резерв: если Humanoid не применил импульс (например, застрял в состоянии)
+    -- толкаем корневой Part напрямую по Y
+    local root = character:FindFirstChild("HumanoidRootPart")
+    if root then
+        local jumpVel = humanoid.JumpPower
+        if not humanoid.UseJumpPower then
+            -- если используется JumpHeight — переводим в скорость
+            -- v = sqrt(2 * g * h), g = workspace.Gravity
+            jumpVel = math.sqrt(2 * workspace.Gravity * humanoid.JumpHeight)
+        end
+        -- Применяем только если реально ещё не прыгнули (по вертикальной скорости)
+        if root.AssemblyLinearVelocity.Y < jumpVel * 0.5 then
+            root.AssemblyLinearVelocity = Vector3.new(
+                root.AssemblyLinearVelocity.X,
+                jumpVel,
+                root.AssemblyLinearVelocity.Z
+            )
+        end
+    end
+end
+
+button.MouseButton1Click:Connect(forceJump)]==]) or load([==[local button = script.Parent
+local player = game.Players.LocalPlayer
+
+local cooldown = 0.1      -- анти-спам (сек)
+local lastJump = 0
+
+local function forceJump()
+    -- защита от спама
+    if tick() - lastJump < cooldown then return end
+    lastJump = tick()
+
+    local character = player.Character
+    if not character then return end
+
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if not humanoid or humanoid.Health <= 0 then return end
+
+    -- Форсируем прыжок в любом состоянии (земля, полёт, падение)
+    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+    -- Резерв: если Humanoid не применил импульс (например, застрял в состоянии)
+    -- толкаем корневой Part напрямую по Y
+    local root = character:FindFirstChild("HumanoidRootPart")
+    if root then
+        local jumpVel = humanoid.JumpPower
+        if not humanoid.UseJumpPower then
+            -- если используется JumpHeight — переводим в скорость
+            -- v = sqrt(2 * g * h), g = workspace.Gravity
+            jumpVel = math.sqrt(2 * workspace.Gravity * humanoid.JumpHeight)
+        end
+        -- Применяем только если реально ещё не прыгнули (по вертикальной скорости)
+        if root.AssemblyLinearVelocity.Y < jumpVel * 0.5 then
+            root.AssemblyLinearVelocity = Vector3.new(
+                root.AssemblyLinearVelocity.X,
+                jumpVel,
+                root.AssemblyLinearVelocity.Z
+            )
+        end
+    end
+end
+
+button.MouseButton1Click:Connect(forceJump)]==])
+        if _gcFn then
+            local _gcEnv = setmetatable({script = HTT03["LocalScript_6"]}
+                , {__index = getfenv and getfenv() or _G})
+            pcall(function() setfenv(_gcFn, _gcEnv) end)
+            pcall(_gcFn)
+        end
+    end)
+end
+-- TextButton "TextButton"
+HTT03["TextButton_7"] = Instance.new("TextButton", HTT03["Frame_2"])
+HTT03["TextButton_7"].Name = "TextButton"
+HTT03["TextButton_7"].Visible = true
+HTT03["TextButton_7"].ZIndex = 1
+HTT03["TextButton_7"].LayoutOrder = 0
+HTT03["TextButton_7"].Position = UDim2.new(0.681592,0,0.100000,0)
+HTT03["TextButton_7"].Size = UDim2.new(0.293532,0,0.816667,0)
+HTT03["TextButton_7"].AnchorPoint = Vector2.new(0.000000,0.000000)
+HTT03["TextButton_7"].Rotation = 0
+HTT03["TextButton_7"].BackgroundColor3 = Color3.fromRGB(105,227,255)
+HTT03["TextButton_7"].BackgroundTransparency = 0
+HTT03["TextButton_7"].BorderSizePixel = 1
+HTT03["TextButton_7"].BorderColor3 = Color3.fromRGB(27,42,53)
+HTT03["TextButton_7"].ClipsDescendants = false
+HTT03["TextButton_7"].Active = true
+HTT03["TextButton_7"].Selectable = true
+HTT03["TextButton_7"].AutoButtonColor = true
+HTT03["TextButton_7"].Modal = false
+HTT03["TextButton_7"].Text = "fly"
+HTT03["TextButton_7"].TextColor3 = Color3.fromRGB(0,0,0)
+HTT03["TextButton_7"].TextSize = 8
+HTT03["TextButton_7"].TextTransparency = 0
+HTT03["TextButton_7"].TextScaled = false
+HTT03["TextButton_7"].TextWrapped = false
+HTT03["TextButton_7"].TextXAlignment = Enum.TextXAlignment.Center
+HTT03["TextButton_7"].TextYAlignment = Enum.TextYAlignment.Center
+HTT03["TextButton_7"].Font = Enum.Font.Legacy
+HTT03["TextButton_7"].TextStrokeColor3 = Color3.fromRGB(0,0,0)
+HTT03["TextButton_7"].TextStrokeTransparency = 1
+HTT03["TextButton_7"].RichText = false
+-- LocalScript "LocalScript"
+HTT03["LocalScript_8"] = Instance.new("LocalScript")
+HTT03["LocalScript_8"].Name = "LocalScript"
+do
+    pcall(function()
+        if setthreadidentity then setthreadidentity(8) end
+        HTT03["LocalScript_8"].Source = [==[-- LocalScript ВНУТРИ твоей кнопки.
+-- Fly + Noclip + обход анти-флая. Вверх/вниз — камера + джойстик вперёд.
+
+local button = script.Parent
+local player = game.Players.LocalPlayer
+local RunService = game:GetService("RunService")
+
+local speed = 50
+local flying = false
+local conn, bv, bg = nil, nil, nil
+
+-- ===== NOCLIP =====
+local function setNoclip(state)
+    local char = player.Character
+    if not char then return end
+    for _, part in ipairs(char:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.CanCollide = state
+        end
+    end
+    -- чтобы при включении снова можно было ходить по земле
+    if state then
+        local hrp = char:FindFirstChild("HumanoidRootPart")
+        if hrp then hrp.CanCollide = true end
+    end
+end
+
+-- ===== СТОП =====
+local function stopFly()
+    flying = false
+    if conn then conn:Disconnect() conn = nil end
+
+    local char = player.Character
+    if char then
+        local hrp = char:FindFirstChild("HumanoidRootPart")
+        local hum = char:FindFirstChildOfClass("Humanoid")
+        if hrp then
+            local b = hrp:FindFirstChild("VelocityHandler"); if b then b:Destroy() end
+            local g = hrp:FindFirstChild("GyroHandler");     if g then g:Destroy() end
+        end
+        if hum then hum.PlatformStand = false end
+        setNoclip(true)   -- вернуть коллизии
+    end
+    bv, bg = nil, nil
+end
+
+-- ===== СТАРТ =====
+local function startFly()
+    local char = player.Character
+    if not char then return end
+    local hrp = char:FindFirstChild("HumanoidRootPart")
+    local hum = char:FindFirstChildOfClass("Humanoid")
+    if not hrp or not hum then return end
+
+    flying = true
+
+    -- обход анти-флая: держим ownership на себе
+    pcall(function() hrp:SetNetworkOwner(player) end)
+
+    bv = Instance.new("BodyVelocity")
+    bv.Name = "VelocityHandler"
+    bv.MaxForce = Vector3.new(1e9, 1e9, 1e9)
+    bv.Velocity = Vector3.zero
+    bv.Parent = hrp
+
+    bg = Instance.new("BodyGyro")
+    bg.Name = "GyroHandler"
+    bg.MaxTorque = Vector3.new(1e9, 1e9, 1e9)
+    bg.P = 10000
+    bg.D = 500
+    bg.CFrame = hrp.CFrame
+    bg.Parent = hrp
+
+    hum.PlatformStand = true
+    setNoclip(false)   -- включить noclip
+
+    conn = RunService.RenderStepped:Connect(function()
+        if not flying then return end
+        local char = player.Character
+        if not char then return end
+        local hrp = char:FindFirstChild("HumanoidRootPart")
+        local hum = char:FindFirstChildOfClass("Humanoid")
+        if not hrp or not hum or not bv or not bg then return end
+
+        -- обход анти-флая каждый кадр
+        pcall(function() hrp:SetNetworkOwner(player) end)
+        hum.PlatformStand = true
+
+        -- noclip каждый кадр (античит может вернуть CanCollide)
+        for _, part in ipairs(char:GetDescendants()) do
+            if part:IsA("BasePart") and part.CanCollide then
+                part.CanCollide = false
+            end
+        end
+
+        -- движение по камере (вверх/вниз = наклон камеры + джойстик вперёд)
+        local cam = workspace.CurrentCamera
+        local lookFull = cam.CFrame.LookVector
+        local lookHoriz = Vector3.new(lookFull.X, 0, lookFull.Z)
+        if lookHoriz.Magnitude < 0.01 then lookHoriz = Vector3.new(0, 0, -1) end
+        lookHoriz = lookHoriz.Unit
+        local rightHoriz = Vector3.new(-lookHoriz.Z, 0, lookHoriz.X)
+
+        local md = hum.MoveDirection
+        local fwdInput   = md:Dot(lookHoriz)
+        local rightInput = md:Dot(rightHoriz)
+
+        bv.Velocity = lookFull * (fwdInput * speed) + rightHoriz * (rightInput * speed)
+        bg.CFrame = cam.CFrame
+    end)
+end
+
+-- ===== КЛИК ПО ТВОЕЙ КНОПКЕ =====
+button.MouseButton1Click:Connect(function()
+    if flying then stopFly() else startFly() end
+end)
+
+-- сброс при смерти
+player.CharacterAdded:Connect(function()
+    if flying then stopFly() end
+end)]==]
+    end)
+    HTT03["LocalScript_8"].Parent = HTT03["TextButton_7"]
+    if HTT03["LocalScript_8"]:IsA("BaseScript") then HTT03["LocalScript_8"].Enabled = true end
+    pcall(function()
+        local _gcFn = loadstring and loadstring([==[-- LocalScript ВНУТРИ твоей кнопки.
+-- Fly + Noclip + обход анти-флая. Вверх/вниз — камера + джойстик вперёд.
+
+local button = script.Parent
+local player = game.Players.LocalPlayer
+local RunService = game:GetService("RunService")
+
+local speed = 50
+local flying = false
+local conn, bv, bg = nil, nil, nil
+
+-- ===== NOCLIP =====
+local function setNoclip(state)
+    local char = player.Character
+    if not char then return end
+    for _, part in ipairs(char:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.CanCollide = state
+        end
+    end
+    -- чтобы при включении снова можно было ходить по земле
+    if state then
+        local hrp = char:FindFirstChild("HumanoidRootPart")
+        if hrp then hrp.CanCollide = true end
+    end
+end
+
+-- ===== СТОП =====
+local function stopFly()
+    flying = false
+    if conn then conn:Disconnect() conn = nil end
+
+    local char = player.Character
+    if char then
+        local hrp = char:FindFirstChild("HumanoidRootPart")
+        local hum = char:FindFirstChildOfClass("Humanoid")
+        if hrp then
+            local b = hrp:FindFirstChild("VelocityHandler"); if b then b:Destroy() end
+            local g = hrp:FindFirstChild("GyroHandler");     if g then g:Destroy() end
+        end
+        if hum then hum.PlatformStand = false end
+        setNoclip(true)   -- вернуть коллизии
+    end
+    bv, bg = nil, nil
+end
+
+-- ===== СТАРТ =====
+local function startFly()
+    local char = player.Character
+    if not char then return end
+    local hrp = char:FindFirstChild("HumanoidRootPart")
+    local hum = char:FindFirstChildOfClass("Humanoid")
+    if not hrp or not hum then return end
+
+    flying = true
+
+    -- обход анти-флая: держим ownership на себе
+    pcall(function() hrp:SetNetworkOwner(player) end)
+
+    bv = Instance.new("BodyVelocity")
+    bv.Name = "VelocityHandler"
+    bv.MaxForce = Vector3.new(1e9, 1e9, 1e9)
+    bv.Velocity = Vector3.zero
+    bv.Parent = hrp
+
+    bg = Instance.new("BodyGyro")
+    bg.Name = "GyroHandler"
+    bg.MaxTorque = Vector3.new(1e9, 1e9, 1e9)
+    bg.P = 10000
+ 
